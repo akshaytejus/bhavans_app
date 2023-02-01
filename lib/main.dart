@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
             width: double.infinity,
             child: Card(
               elevation: 5,
-              child: Text("Student/Teacher"),
+              child: Text("Student_Teacher"),
             ),
           ),
         ],

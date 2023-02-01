@@ -21,11 +21,15 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter App'),
+        title: Text('Bhavan\'s App'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          Text("Login",
+          style: TextStyle(
+            fontSize: 40,
+          ),),
           Container(
             width: double.infinity,
             child: Card(

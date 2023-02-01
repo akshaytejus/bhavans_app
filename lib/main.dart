@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,7 +15,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +28,7 @@ class MyHomePage extends StatelessWidget {
             width: double.infinity,
             child: Card(
               elevation: 5,
-              child: Text("Student_Teacher"),
+              child: Text("Student/Teacher"),
             ),
           ),
         ],

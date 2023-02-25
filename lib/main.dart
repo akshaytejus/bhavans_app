@@ -1,44 +1,27 @@
 import 'package:flutter/material.dart';
 
+import 'Pages/login.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter App',
       home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Bhavan\'s App'),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Text("Login",
-          style: TextStyle(
-            fontSize: 40,
-          ),),
-          Container(
-            width: double.infinity,
-            child: Card(
-              elevation: 5,
-              child: Text("Student_Teacher"),
-            ),
-          ),
-        ],
-      ),
-    );
+    return const Login();
   }
 }

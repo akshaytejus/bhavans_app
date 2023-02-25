@@ -2,11 +2,6 @@ import 'package:bhavans_app/Components/student_drawer.dart';
 import 'package:flutter/material.dart';
 
 import '../Components/classes.dart';
-import './contact_us.dart';
-import './downloads.dart';
-import './payments.dart';
-import './results.dart';
-import './timetable.dart';
 import './notification_screen.dart';
 
 class StudentHomePage extends StatelessWidget {

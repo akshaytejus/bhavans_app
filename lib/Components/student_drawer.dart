@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Pages/timetable.dart';
+import '../Pages/student_timetable.dart';
 import '../Pages/results.dart';
 import '../Pages/downloads.dart';
 import '../Pages/payments.dart';

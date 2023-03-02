@@ -84,7 +84,7 @@ class StudentDrawer extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ContactUs()),
+                    MaterialPageRoute(builder: (context) => ContactUs()),
                   );
                 },
               ),

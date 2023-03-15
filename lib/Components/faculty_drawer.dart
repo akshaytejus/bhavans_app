@@ -29,8 +29,7 @@ class FacultyDrawer extends StatelessWidget {
                   ),
                 ],
               ),
-              const Text("Roll No: 10722086039"),
-              const Text("BCA")
+              const Text("Roll No: 10722086039")
             ],
           ),
         ),
@@ -38,11 +37,6 @@ class FacultyDrawer extends StatelessWidget {
           children: [
             ListTile(
               title: const Text('TimeTable'),
-              onTap: () {
-              },
-            ),
-            ListTile(
-              title: const Text('Results'),
               onTap: () {
               },
             ),

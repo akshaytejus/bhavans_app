@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../Pages/notification_screen.dart';
 import '../Components/faculty_drawer.dart';
 
-
 class FacultyHomePage extends StatelessWidget {
   FacultyHomePage({super.key});
 
@@ -76,6 +75,6 @@ class FacultyHomePage extends StatelessWidget {
           children: const <Widget>[
             FacultyClasses(),
           ],
-        ));;
+        ));
   }
 }

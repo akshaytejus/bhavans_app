@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../Pages/timetable_view.dart';
-import '../Pages/results.dart';
 import '../Pages/contact_us.dart';
 
-class StudentDrawer extends StatelessWidget {
-  const StudentDrawer({super.key});
+class FacultyDrawer extends StatelessWidget {
+  const FacultyDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +30,7 @@ class StudentDrawer extends StatelessWidget {
                 ],
               ),
               const Text("Roll No: 10722086039"),
-              const Text("BCA"),
-              const Text("Overall percentage: %% ")
+              const Text("BCA")
             ],
           ),
         ),
@@ -42,19 +39,11 @@ class StudentDrawer extends StatelessWidget {
             ListTile(
               title: const Text('TimeTable'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TimeTableView()),
-                );
               },
             ),
             ListTile(
               title: const Text('Results'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Results()),
-                );
               },
             ),
             Container(

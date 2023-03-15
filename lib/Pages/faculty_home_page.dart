@@ -1,11 +1,12 @@
+import 'package:bhavans_app/Components/faculty_classes.dart';
 import 'package:flutter/material.dart';
 
-import '../Components/student_classes.dart';
-import '../Components/student_drawer.dart';
-import './notification_screen.dart';
+import '../Pages/notification_screen.dart';
+import '../Components/faculty_drawer.dart';
 
-class StudentHomePage extends StatelessWidget {
-  StudentHomePage({super.key});
+
+class FacultyHomePage extends StatelessWidget {
+  FacultyHomePage({super.key});
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -14,7 +15,7 @@ class StudentHomePage extends StatelessWidget {
     return Scaffold(
         key: scaffoldKey,
         drawer: const Drawer(
-          child: StudentDrawer(),
+          child: FacultyDrawer(),
         ),
         appBar: AppBar(
           leading: Builder(
@@ -72,9 +73,9 @@ class StudentHomePage extends StatelessWidget {
           ),
         ),
         body: Column(
-          children: <Widget>[
-            StudentClasses(),
+          children: const <Widget>[
+            FacultyClasses(),
           ],
-        ));
+        ));;
   }
 }

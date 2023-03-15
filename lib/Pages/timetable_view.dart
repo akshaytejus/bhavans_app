@@ -2,8 +2,8 @@
 
 import '../Models/class_data.dart';
 
-class TimeTable extends StatelessWidget {
-  TimeTable({super.key});
+class TimeTableView extends StatelessWidget {
+  TimeTableView({super.key});
 
   final Map<String, List<ClassData>> classMap = {
     "Monday": [

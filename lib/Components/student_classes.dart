@@ -4,7 +4,7 @@ import '../Models/student_data.dart';
 import '../Models/class_data.dart';
 
 
-class Classes extends StatelessWidget {
+class StudentClasses extends StatelessWidget {
   final List<ClassData> _classData = [
     ClassData(
         className: "INFORMATION SECURITY",
@@ -35,7 +35,7 @@ class Classes extends StatelessWidget {
     StudentData(percentage: "85 %")
   ];
 
-  Classes({super.key});
+  StudentClasses({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,4 @@
+import 'package:bhavans_app/Pages/faculty_home_page.dart';
 import 'package:flutter/material.dart';
 
 class FacultyLogin extends StatelessWidget {
@@ -46,6 +47,10 @@ class FacultyLogin extends StatelessWidget {
             margin: const EdgeInsets.all(10),
             child: ElevatedButton(
               onPressed: () {
+                 Navigator.pushAndRemoveUntil(context,
+                  MaterialPageRoute(builder: (context) => FacultyHomePage()
+                ),
+                (route) => false);
               },
               child: const Text("Login"),
             ),

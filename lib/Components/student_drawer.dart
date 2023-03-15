@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../Pages/student_timetable.dart';
 import '../Pages/results.dart';
-import '../Pages/downloads.dart';
-import '../Pages/payments.dart';
 import '../Pages/contact_us.dart';
 
 class StudentDrawer extends StatelessWidget {
@@ -54,25 +52,7 @@ class StudentDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Results()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Downloads'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Downloads()),
-                );
-              },
-            ),
-            ListTile(
-              title: const Text('Payments'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Payments()),
+                  MaterialPageRoute(builder: (context) => Results()),
                 );
               },
             ),
@@ -84,7 +64,7 @@ class StudentDrawer extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ContactUs()),
+                    MaterialPageRoute(builder: (context) => const ContactUs()),
                   );
                 },
               ),

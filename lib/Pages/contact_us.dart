@@ -2,12 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactUs extends StatelessWidget {
-  ContactUs({super.key});
+  const ContactUs({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const url = "https://www.bhavansvc.ac.in";
-    final uri = Uri.parse(url);
+
+
+    void launchPhoneApp(phoneNumber) async {
+      final url = 'tel:$phoneNumber';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
+
     return Scaffold(
         backgroundColor: Colors.blue,
         body: SafeArea(
@@ -31,36 +40,37 @@ class ContactUs extends StatelessWidget {
                         fontWeight: FontWeight.normal)),
                 const SizedBox(height: 30.0),
                 TextButton(
-                  onPressed: () {
-                    //logic  goes here
-                  },
+                  onPressed: () => launchPhoneApp(040 - 27111611),
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(15),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
-                      Icon(Icons.phone, color: Color(0xFFED92A2)),
+                      Icon(
+                        Icons.phone,
+                        color: Colors.white,
+                      ),
                       SizedBox(width: 20.0),
-                      Text('040-27111611',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w500)),
+                      Text(
+                        '040-27111611',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w500),
+                      )
                     ],
                   ),
                 ),
                 TextButton(
-                  onPressed: () {
-                    //logic  goes here
-                  },
+                  onPressed: () => launchPhoneApp(040 - 27115878),
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(15),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
-                      Icon(Icons.phone, color: Color(0xFFED92A2)),
+                      Icon(Icons.phone, color: Colors.white),
                       SizedBox(width: 20.0),
                       Text('040-27115878',
                           style: TextStyle(
@@ -71,8 +81,14 @@ class ContactUs extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {
-                    //logic  goes here
+                  onPressed: () async {
+                    const url = 'https://blog.logrocket.com';
+                    if (await canLaunch(url)) {
+                      await launch(
+                          url); //forceWebView is true now
+                    } else {
+                      throw 'Could not launch $url';
+                    }
                   },
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.all(15),
@@ -80,51 +96,11 @@ class ContactUs extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
-                      Icon(Icons.mail, color: Color(0xFFED92A2)),
+                      Icon(Icons.language, color: Colors.white),
                       SizedBox(width: 20.0),
-                      Text('example@logrocket.com',
+                      Text('bvc@bhavansvc.ac.in',
                           style: TextStyle(
-                              color: Color(0xFFA294C2),
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w500)),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    //logic  goes here
-                  },
-                  style: TextButton.styleFrom(
-                    padding: const EdgeInsets.all(15),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Icon(Icons.location_pin, color: Color(0xFFED92A2)),
-                      SizedBox(width: 20.0),
-                      Text('87 Summer St., Boston, MA 02110',
-                          style: TextStyle(
-                              color: Color(0xFFA294C2),
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.w500)),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    //logic  goes here
-                  },
-                  style: TextButton.styleFrom(
-                    padding: const EdgeInsets.all(15),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Icon(Icons.language, color: Color(0xFFED92A2)),
-                      SizedBox(width: 20.0),
-                      Text('blog.logrocket.com',
-                          style: TextStyle(
-                              color: Color(0xFFA294C2),
+                              color: Colors.white,
                               fontSize: 16.0,
                               fontWeight: FontWeight.w500)),
                     ],

@@ -1,3 +1,4 @@
+import 'package:bhavans_app/Pages/timetable_add.dart';
 import 'package:flutter/material.dart';
 
 import '../Pages/contact_us.dart';
@@ -29,7 +30,7 @@ class FacultyDrawer extends StatelessWidget {
                   ),
                 ],
               ),
-              const Text("Roll No: 10722086039")
+              const Text("Faculty ID: 10722086039")
             ],
           ),
         ),
@@ -38,6 +39,10 @@ class FacultyDrawer extends StatelessWidget {
             ListTile(
               title: const Text('TimeTable'),
               onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TimetableAdd()),
+                );
               },
             ),
             Container(
